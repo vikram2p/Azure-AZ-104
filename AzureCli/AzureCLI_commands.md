@@ -6,19 +6,23 @@
    then run:az version
    
 2) Log in to Azure (a browser window will open for authentication)
-    az login
-	Select subscription
+
+   az login
+   Select subscription
 	
-3)  create resource group
+4)  create resource group
+   
     az group create --name mytest --location eastus (mytest=resourcegroup name , eastus=location
 	
-4) command to check list of resourcegroup
+6) command to check list of resourcegroup
+   
    az group list
    
-5) Delete resourcegroup
+8) Delete resourcegroup
+   
    az group delete --name Resourcegp (Resourcegp is resource groupname)
    
-6) Deploy VM in azure
+10) Deploy VM in azure
    az vm create \
   --resource-group testrg1 \  #testrg1 is resource-group
   --name vm1 \
@@ -29,7 +33,7 @@
   --zone 3 \
   --public-ip-sku Standard
   
-7) connect vm 
+11) connect vm 
 
   ssh username@publicip
   
