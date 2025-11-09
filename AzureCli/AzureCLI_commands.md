@@ -35,32 +35,40 @@
   
 11) connect vm 
 
-  ssh username@publicip
+    ssh username@publicip
   
 8) shutdown vm from azure cli
-  az vm stop --resource-group testrg1 --name vm1
-  
-9) Start VM from shutdown state
-  az vm start --resource-group --name vm1
-  
-10) stop and deallocate VM
-  az vm deallocate --resource-group testrg1 --name vm1
 
-11) delete azure vm
+   az vm stop --resource-group testrg1 --name vm1
+  
+10) Start VM from shutdown state
+  
+   az vm start --resource-group --name vm1
+  
+11) stop and deallocate VM
+   az vm deallocate --resource-group testrg1 --name vm1
+
+12) delete azure vm
+
    az vm delete --resource-group --name vm1
    
-12) command to find publlic ip associated with my VM
-   az vm list-ip-addresses  #it will list all public ip-addresses
+14) command to find publlic ip associated with my VM
 
-13) command to ffind public ip address of perticular VM
-   az vm show -d --resource-group mygrp1 --name vm1 --query 'publicIps'
+	az vm list-ip-addresses  #it will list all public ip-addresses
+
+16) command to ffind public ip address of perticular VM
+
+	az vm show -d --resource-group mygrp1 --name vm1 --query 'publicIps'
    
-14) Quick command to open specific port (e.g 8080) inbound for vm
-   az vm open-port --port 8080 --resource-group myrg1 --name vm1 
+18) Quick command to open specific port (e.g 8080) inbound for vm
+
+ 	az vm open-port --port 8080 --resource-group myrg1 --name vm1 
    
-15) delete specific port from NSG 
-  az network nsg rule delete --resource-group myrg1 --nsg-name vm1NSG --name open-port-8080  #open-port-8080 is inboud rule
+20) delete specific port from NSG 
   
-16) command to retrive list of rules from NSG 
-  az network nsg rule list --resource-group myrg1 --nsg-name vm1NSG
+  	az network nsg rule delete --resource-group myrg1 --nsg-name vm1NSG --name open-port-8080  #open-port-8080 is inboud rule
+  
+21) command to retrive list of rules from NSG 
+  
+  	az network nsg rule list --resource-group myrg1 --nsg-name vm1NSG
   
